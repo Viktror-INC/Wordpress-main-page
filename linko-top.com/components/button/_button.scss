@@ -1,0 +1,48 @@
+.button {
+  display: inline-block;
+  padding: vr(0.5);
+
+  line-height: 1;
+  color: inherit;
+  font-family: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  background-color: #eeeeee;
+  background-image: none;
+  border: none;
+  cursor: pointer;
+
+  user-select: none;
+
+  &--fluid {
+    display: block;
+    max-width: unset;
+  }
+
+  &--centered {
+    display: block;
+    max-width: 200px;
+    margin: vr(1) auto;
+  }
+
+  &--load-more {
+    position: relative;
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+.page--no-touch .button:hover {
+  opacity: 0.7;
+}
+
+.page--no-touch .button--disabled:hover,
+.page--no-touch .button:disabled {
+  opacity: 0.3;
+}
